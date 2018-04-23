@@ -28,10 +28,9 @@ Your instance is configured and ready to go. Click "Create Instance," and give G
   ⋅⋅*NOTE: if you are lazy, or just want to get your node up and running quickly, you can enable traffic on all ports. Under "Protocols and ports", select "Allow all". You need to do this for both Ingress and Egress. Please note that doing this can be a security hazard - don't deal with any sensitive information on your VM if you take this route.
   
  5. Your VM is ready! Go back to the VM Instances page (Products and Services -> Compute Engine -> VM Instances). Under the "Connect" field for your new instance, click the SSH button. This will open a new console where you will be able to interact with your VM via command line.
- 
- To set up your IRI Headless Node equipped with Nelson peer discovery services, simply enter the following command:
+   To set up your IRI Headless Node equipped with Nelson peer discovery services, simply enter the following command:
  `sudo curl https://raw.githubusercontent.com/tanglewise/Scripts/master/nelson_setup_script.sh | bash`
- 
- The setup will take some time, about 30 minutes. Once your VM has finished all of the setup processes, you can check your node status with `curl http://localhost:18600`. Your node is fully synced if the latestMilestone field matches the [latest coordinator milestone](https://milestone.iotatangle.space/). Don't worry if your latestMilestone does not match the actual latest milestone. This just means your node is not yet fully synced. Give your node some time and check periodically with `curl http://localhost:18600`.
+
+ 6. The setup will take some time, about 30 minutes. Once your VM has finished all of the setup processes, you can check your node status with `curl http://localhost:18600`. Your node is fully synced if the latestMilestone field matches the [latest coordinator milestone](https://milestone.iotatangle.space/). Don't worry if your latestMilestone does not match the actual latest milestone. This just means your node is not yet fully synced. Give your node some time and check periodically with `curl http://localhost:18600`.
  
 That's it! Your IOTA node should be up and running.  
